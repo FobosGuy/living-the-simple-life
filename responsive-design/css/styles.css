@@ -1,0 +1,323 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: .9rem;
+}
+
+@media (min-width: 700px) {
+    html {
+        font-size: 1rem;
+    }
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Ubuntu', sans-serif;
+    color: #707070;
+}
+
+img {
+    width: 100%;
+    object-fit: cover;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Lora', sans-serif;
+    font-weight: 400;
+    color: #143774;
+}
+
+header {
+    margin-bottom: 3em;
+    padding: 3em 0;
+    background-color: #F8F8F8;
+}
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.container-flex {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 700px) {
+    .container-flex {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+/* ===================
+    Header
+   =================== */
+
+.logo {
+    text-align: center;
+}
+
+.logo .title {
+    font-size: 2.1rem;
+}
+
+.logo .small-title {
+    font-size: .75rem;
+    font-weight: 700;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: #1792D2;
+}
+
+nav ul {
+    height: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav li {
+    margin-top: 2em;
+}
+
+nav a {
+    font-weight: 700;
+    text-decoration: none;
+    color: #707070;
+}
+
+nav a:hover,
+nav a:focus {
+    color: #1792D2;
+}
+
+.current-page {
+    text-decoration: underline;
+}
+
+.current-page:hover,
+.current-page:focus {
+    cursor: default;
+    color: #707070;
+}
+
+@media (min-width: 700px) {
+    nav ul {
+        flex-direction: row;
+    }
+
+    nav li {
+        margin-top: 0;
+        margin-left: 1.5em;
+    }
+
+}
+
+/* ===================
+    Main
+   =================== */
+
+.post {
+    margin-bottom: 2.5em;
+    padding-bottom: 2em;
+    display: flex;
+    flex-direction: column;
+}
+
+.post:first-child {
+    border-bottom: 1px solid #707070;
+    
+}
+
+.post-title {
+    font-size: 1.5rem;
+}
+
+.post-image {
+    order: -2;
+}
+
+.post-body {
+    margin: 1em 0;
+    font-size: 1.125rem;
+    font-weight: 300;
+    line-height: 1.5em;
+}
+
+.post-body a,
+.post-continue {
+    color: #1792D2;
+}
+
+.post-info {
+    margin: 1.5em 0;
+    order: -1;
+}
+
+.post-continue {
+    margin-top: 1.5em;
+    font-size: .875rem;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    
+}
+
+.post-continue:hover {
+    color: #143774;
+}
+
+/* Recent Posts modifications */
+
+.recent-posts .post {
+    border: none;
+}
+
+
+
+
+@media (min-width: 700px) {
+    .recent-posts .post {
+        flex-direction: row;
+    }
+    .recent-posts .preview {
+        width: 40%;
+        margin-right: 2em;
+        display: flex;
+        flex-direction: column;
+    }
+    .recent-posts .preview img {
+        height: 100%;
+    }
+    
+    .recent-posts .content {
+        width: 50%;
+    }
+    
+}
+
+/* About modifications */
+
+.bio {
+    margin-bottom: 3em;
+}
+
+.bio img {
+    margin-bottom: 1.5em;
+}
+
+.bio-header {
+    margin-bottom: .7em;
+    font-size: 1.5rem;
+}
+
+.bio-sub-header {
+    margin-bottom: 0.625em;
+    font-size: 1.275rem;
+    color: #1792D2;
+}
+
+.bio p {
+    margin-bottom: .875em;
+}
+
+/* ===================
+    Aside
+   =================== */
+
+.sidebar {
+    min-width: 250px;
+}
+
+.sidebar-widget {
+    border: 1.5em solid #EBEBEB;
+    margin-bottom: 4em;
+    padding: 1.875em;
+}
+
+.widget-title {
+    margin-bottom: 1em;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+}
+
+.widget-image {
+    max-height: 250px;
+}
+
+.widget-body {
+    margin-top: 1.5em;
+    font-weight: 300;
+    color: #143774;
+}
+
+.widget-post {
+    display: flex;
+    flex-direction: column;
+}
+
+.widget-post:not(:last-child) {
+    border-bottom: 1px solid #707070;
+    margin-bottom: 2em;
+    padding-bottom: 2em;
+}
+
+.widget-post-title {
+    font-size: 1.125rem;
+}
+
+.widget-post-image {
+    order: -1;
+    max-height: 200px;
+    margin-bottom: 1em;
+}
+
+@media (min-width: 700px) {
+    .sidebar {
+        margin-left: 2em;
+    }
+}
+
+/* ===================
+    Footer
+   =================== */
+
+footer {
+    margin-top: auto;
+    padding: 2.875em 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #FFFFFF;
+    background-color: #143774;
+}
+
+footer h3,
+footer p {
+    opacity: 0.54;
+}
+
+footer h3 {
+    margin-bottom: 0.5em;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #FFFFFF;
+}
+
+footer p {
+    font-weight: 300;
+}
